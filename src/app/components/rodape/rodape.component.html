@@ -1,0 +1,44 @@
+<footer id="rodape" class="rodape">
+  <div class="rodape__marks" aria-hidden="true">
+    @for (oval of ovals; track $index) {
+      <span
+        class="rodape__mark"
+        [style.left.%]="oval.x"
+        [style.top.%]="oval.y"
+        [style.width.px]="oval.w"
+        [style.height.px]="oval.h"
+      ></span>
+    }
+  </div>
+  <div class="rodape__inner">
+    <div class="rodape__brand">
+      <img src="assets/img/Logo_white.png" alt="Doceria X" width="140" height="48" />
+      <p>Cookies artesanais com alma de casa e ciência de laboratório de sabores.</p>
+    </div>
+    <div class="rodape__cols">
+      <div>
+        <h3>Endereço</h3>
+        <p>Rua do Açúcar, 123 Bairro Doce Vida<br />Minas Gerais - MG</p>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <p>Ter a sáb: 10h às 19h<br />Dom: 10h às 14h</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>
+          <a href="mailto:contato&#64;doceriax.com.br">contato&#64;doceriax.com.br</a><br />
+          <a href="tel:+5511999999999">(11) 99999-9999</a>
+        </p>
+      </div>
+      <div>
+        <h3>Redes</h3>
+        <p>
+          <a href="#" aria-label="Instagram">Instagram</a> 
+          <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        </p>
+      </div>
+    </div>
+    <p class="rodape__copy">© {{ year }} Doceria X. Todos os direitos reservados.</p>
+  </div>
+</footer>

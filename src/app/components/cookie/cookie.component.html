@@ -1,0 +1,54 @@
+<section id="cookie" class="cookie section" aria-labelledby="cookie-title">
+  <div class="section__inner">
+    <h2 id="cookie-title">Cookie de macadâmia &amp; chocolate branco</h2>
+    <p class="cookie__intro">
+      Nossa assinatura: macadâmia tostada, chocolate branco generoso e massa dourada é feita em pequenas fornadas para manter frescor e sabor em cada mordida.
+    </p>
+
+    <div class="cookie__grid">
+      <figure class="cookie__pile">
+        <img src="assets/img/cookie_pile.png" alt="Pilha de cookies de macadâmia" width="560" height="700" />
+      </figure>
+      <div class="cookie__recipe">
+        <h3>Ingredientes</h3>
+        <ul class="ingredient-list">
+          <li>Manteiga em temperatura ambiente</li>
+          <li>Ovo</li>
+          <li>Essência de baunilha</li>
+          <li>Açúcar refinado</li>
+          <li>Açúcar mascavo</li>
+          <li>Farinha de trigo</li>
+          <li>Sal</li>
+          <li>Bicarbonato de sódio</li>
+          <li>Gotas de chocolate branco</li>
+          <li>Macadâmia</li>
+        </ul>
+        <div class="secret-ingredient" role="note">
+          <h3>Ingrediente secreto</h3>
+          <p>
+            O toque que ninguém vê na lista: <strong>frescor e sabor de cada fornada</strong>. Assamos em rodadas menores para você receber o cookie no auge.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cookie-showcase" aria-label="Destaque do cookie principal">
+      <div class="cookie-float-group">
+        @for (phrase of flavorChips; track $index; let i = $index) {
+          <span
+            class="flavor-chip"
+            [style.--chip-delay]="i * 0.1 + 's'"
+            [style.--angle]="(i * 360 / flavorChips.length) + 'deg'"
+            [style.--orbit-duration]="(12 + (i % 4) * 1.2) + 's'"
+          >
+            {{ phrase }}
+          </span>
+        }
+        <div class="cookie-showcase__center">
+          <img class="cookie-main" src="assets/img/cookie_main.png" alt="Cookie de macadâmia com chocolate branco" width="420" height="420" />
+        </div>
+      </div>
+      <button type="button" class="btn btn--accent btn--lg" (click)="openContact()">Peça agora</button>
+    </div>
+  </div>
+</section>

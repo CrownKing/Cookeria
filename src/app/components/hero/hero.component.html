@@ -1,0 +1,24 @@
+<section id="hero" class="hero section" aria-labelledby="hero-title">
+  <div class="hero__bg" role="img" aria-hidden="true"></div>
+  <div class="hero__marks" aria-hidden="true">
+    @for (mark of marks; track $index) {
+      <span
+        class="hero__mark"
+        [style.left.%]="mark.x"
+        [style.top.%]="mark.y"
+        [style.width.px]="mark.w"
+        [style.height.px]="mark.h"
+      ></span>
+    }
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Cookies artesanais da casa</p>
+    <h1 id="hero-title">Crocante por fora, irresistível por dentro</h1>
+    <p class="hero__lead">Feitos diariamente para chegar até você sempre fresquinhos.</p>
+    <div class="hero__actions">
+      <button type="button" class="btn btn--primary" (click)="scrollTo('cookie')">Conheça o cookie de macadâmia</button>
+      <button type="button" class="btn btn--ghost" (click)="scrollTo('contato')">Fale com a gente</button>
+    </div>
+  </div>
+</section>
