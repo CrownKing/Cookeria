@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
   scrollTo(id: string): void {
+    this.menuOpen = false;
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 }
-

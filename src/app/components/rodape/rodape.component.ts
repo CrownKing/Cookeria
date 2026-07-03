@@ -48,10 +48,6 @@ export class RodapeComponent implements OnInit {
           h: ovalHeight,
         };
 
-        if (this.isInsideTextArea(candidate.x, candidate.y)) {
-          continue;
-        }
-
         const hasRoom = quadrantMarks.every((mark) => {
           const dx = candidate.x - mark.x;
           const dy = candidate.y - mark.y;
@@ -69,10 +65,5 @@ export class RodapeComponent implements OnInit {
 
   private randomBetween(min: number, max: number): number {
     return Math.random() * (max - min) + min;
-  }
-
-  private isInsideTextArea(x: number, y: number): boolean {
-    // Evita gerar ovais na região central onde ficam os textos do rodapé.
-    return x >= 12 && x <= 88 && y >= 12 && y <= 90;
   }
 }

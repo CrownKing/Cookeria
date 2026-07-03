@@ -1,0 +1,8 @@
+<div class="section-wave" [class]="'section-wave--v' + variant()" aria-hidden="true">
+  <svg [attr.viewBox]="waveViewBox" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    @if (accent()) {
+      <path class="section-wave__accent" [attr.d]="wavePath" [attr.fill]="accent()" />
+    }
+    <path [attr.d]="wavePath" [attr.fill]="fill()" />
+  </svg>
+</div>

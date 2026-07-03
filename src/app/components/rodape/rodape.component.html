@@ -1,15 +1,4 @@
 <footer id="rodape" class="rodape">
-  <div class="rodape__marks" aria-hidden="true">
-    @for (oval of ovals; track $index) {
-      <span
-        class="rodape__mark"
-        [style.left.%]="oval.x"
-        [style.top.%]="oval.y"
-        [style.width.px]="oval.w"
-        [style.height.px]="oval.h"
-      ></span>
-    }
-  </div>
   <div class="rodape__inner">
     <div class="rodape__brand">
       <img src="assets/img/Logo_white.png" alt="Doceria X" width="140" height="48" />
@@ -39,6 +28,11 @@
         </p>
       </div>
     </div>
-    <p class="rodape__copy">© {{ year }} Doceria X. Todos os direitos reservados.</p>
+    <p class="rodape__copy">
+      Desenvolvido por <a href="https://lobacria.com.br" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;"><b><i>Loba Cria</i></b></a>
+ 
+      <br>
+      © {{ year }} Doceria X. Todos os direitos reservados.
+    </p>
   </div>
 </footer>

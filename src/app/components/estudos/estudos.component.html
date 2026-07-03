@@ -1,4 +1,4 @@
-<section id="estudos" class="estudos section" aria-labelledby="estudos-title">
+<section id="estudos" class="estudos section section--wave" aria-labelledby="estudos-title">
   <div class="estudos__photo" aria-hidden="true"></div>
   <div class="section__inner estudos__inner">
     <h2 id="estudos-title">Como nasceu nosso Cookie de Macadâmia</h2>
@@ -14,4 +14,11 @@
       Esse processo virou ritual: prova sensorial, ajuste fino e assar de novo até a receita cantar do jeito que sonhamos.
     </p>
   </div>
+  <app-section-wave
+    class="estudos__wave"
+    [fill]="waveFill"
+    [accent]="waveAccent"
+    [variant]="6"
+    style="left:47.75% !important;"
+  />
 </section>

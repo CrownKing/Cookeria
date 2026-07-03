@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { SectionWaveComponent } from '../section-wave/section-wave.component';
 
 @Component({
   selector: 'app-cookie',
   standalone: true,
+  imports: [SectionWaveComponent],
   templateUrl: './cookie.component.html',
 })
 export class CookieComponent {
+  readonly waveFill = '#efe2b2';
+  readonly waveAccent = '#efe2b2';
+
   readonly flavorChips = [
     'Hummm!',
     'Croc!',

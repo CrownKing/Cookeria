@@ -1,4 +1,4 @@
-<section id="hero" class="hero section" aria-labelledby="hero-title">
+<section id="hero" class="hero section section--wave" aria-labelledby="hero-title">
   <div class="hero__bg" role="img" aria-hidden="true"></div>
   <div class="hero__marks" aria-hidden="true">
     @for (mark of marks; track $index) {
@@ -21,4 +21,5 @@
       <button type="button" class="btn btn--ghost" (click)="scrollTo('contato')">Fale com a gente</button>
     </div>
   </div>
+  <app-section-wave [fill]="waveFill" [accent]="waveAccent" [variant]="1" />
 </section>

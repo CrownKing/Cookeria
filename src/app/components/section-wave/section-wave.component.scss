@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65px;
+  transform: rotate(180deg);
+  z-index: 6;
+  pointer-events: none;
+  @media (max-width: 739px) {
+    top: 25px;
+  }
+}
+
+.section-wave {
+  line-height: 0;
+  transform: translateY(calc(100% - 1px));
+}
+
+.section-wave svg {
+  width: calc(100% + 1.3px);
+  margin-left: -0.65px;
+  height: var(--wave-height, clamp(52px, 9vw, 96px));
+  display: block;
+}
+
+.section-wave__accent {
+  transform: translateY(5px);
+  transform-origin: center top;
+}
+
+.section-wave--v2 svg {
+  transform: scaleX(-1);
+}
+
+.section-wave--v3 svg {
+  transform: scaleX(-1) scaleY(1.06);
+}
+
+.section-wave--v4 svg {
+  transform: scaleX(1.03);
+}
+
+.section-wave--v5 svg {
+  transform: scaleX(-1) translateY(-3px);
+}
+
+.section-wave--v6 svg {
+  transform: scaleY(1.05);
+}

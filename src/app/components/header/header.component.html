@@ -1,8 +1,18 @@
-<header class="top-bar">
-  <button type="button" class="logo-btn" (click)="scrollTo('hero')" aria-label="Início">
+<header class="top-bar" [class.top-bar--menu-open]="menuOpen">
+  <button type="button" class="logo-btn" (click)="scrollTo('hero')" aria-label="Inï¿½cio">
     <img src="assets/img/Logo_color.png" alt="Doceria X" width="120" height="40" />
   </button>
-  <nav class="nav-links" aria-label="Principal">
+  <button
+    type="button"
+    class="menu-toggle"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen"
+    [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+    aria-controls="main-nav"
+  >
+    <span class="menu-toggle__icon" aria-hidden="true"></span>
+  </button>
+  <nav id="main-nav" class="nav-links" [class.nav-links--open]="menuOpen" aria-label="Principal">
     <button type="button" (click)="scrollTo('sobre')">A casa</button>
     <button type="button" (click)="scrollTo('estudos')">Estudos</button>
     <button type="button" (click)="scrollTo('cookie')">Cookie</button>

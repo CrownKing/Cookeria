@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionWaveComponent } from '../section-wave/section-wave.component';
 
 type BackgroundMark = {
   x: number;
@@ -10,14 +11,25 @@ type BackgroundMark = {
 @Component({
   selector: 'app-hero',
   standalone: true,
+  imports: [SectionWaveComponent],
   templateUrl: './hero.component.html',
 })
 export class HeroComponent implements OnInit {
+  readonly waveFill = '#BD8C61';
+  readonly waveAccent = '#C9A882';
+
   marks: BackgroundMark[] = [];
 
   ngOnInit(): void {
     // Tamanho das bolinhas do hero (em px): min e max.
-    this.marks = this.generateMarks(6, 7, [12, 24]);
+    const isSmallScreen = window.innerWidth <= 500;
+    if (isSmallScreen) {
+      // Para telas até 500px, no máximo 16 marks (4 por quadrante)
+      this.marks = this.generateMarks(5, 6.5, [8, 12]);
+    } else {
+      // Padrão: 6 por quadrante
+      this.marks = this.generateMarks(6, 7, [12, 24]);
+    }
   }
 
   scrollTo(id: string): void {

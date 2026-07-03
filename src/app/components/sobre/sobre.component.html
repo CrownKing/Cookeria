@@ -1,7 +1,7 @@
-<section id="sobre" class="sobre section" aria-labelledby="sobre-title">
+<section id="sobre" class="sobre section section--wave" aria-labelledby="sobre-title">
   <div class="section__inner sobre__inner">
     <div class="sobre__content">
-      <h2 id="sobre-title">Sobre a casa</h2>
+      <h2 id="sobre-title" style="color: var(--c-teal);">Sobre a casa</h2>
       <p class="sobre__text">
         A Doceria X é um cantinho acolhedor, pensado para quem busca sabor autêntico e aroma de forno quentinho. Nossa
         especialidade são os <strong>cookies</strong>: receitas testadas, ingredientes selecionados e aquele ponto dourado que são quem assa com calma consegue.
@@ -15,4 +15,5 @@
       <img src="assets/img/confeiteira.jpg" alt="Confeiteira preparando cookies artesanais" width="760" height="1000" />
     </figure>
   </div>
+  <app-section-wave [fill]="waveFill" [accent]="waveAccent" [variant]="2" />
 </section>
